@@ -1,4 +1,4 @@
-import s from "./ContactItem.module.css";
+import s from "./Contact.module.css";
 import PropTypes from "prop-types";
 
 function Contact({ contact, onDeleteContact }) {

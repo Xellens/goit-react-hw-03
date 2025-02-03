@@ -1,12 +1,12 @@
 import s from "./ContactList.module.css";
 import PropTypes from "prop-types";
-import ContactItem from "../ContactItem/ContactItem";
+import Contact from "../Contact/Contact";
 
 function ContactList({ contacts, onDeleteContact }) {
   return (
     <ul className={s.list}>
       {contacts.map((contact) => (
-        <ContactItem
+        <Contact
           key={contact.id}
           contact={contact}
           onDeleteContact={onDeleteContact}
