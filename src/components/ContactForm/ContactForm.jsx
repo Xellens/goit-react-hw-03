@@ -21,13 +21,8 @@ function ContactForm({ onAddContact }) {
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    const newContact = {
-      id: "id-" + Date.now().toString(),
-      name: values.name,
-      number: values.number,
-    };
+    onAddContact(values.name, values.number);
 
-    onAddContact(newContact);
     resetForm();
   };
 

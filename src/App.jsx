@@ -25,7 +25,6 @@ function App() {
   }, [contacts]);
 
   const addContact = (name, number) => {
-    // Перевірка на дублікат
     const isExist = contacts.some(
       (contact) => contact.name.toLowerCase() === name.toLowerCase()
     );
@@ -34,7 +33,6 @@ function App() {
       return;
     }
 
-    // Використовуємо Date.now() для створення "унікального" id
     const newContact = {
       id: "id-" + Date.now().toString(),
       name,
